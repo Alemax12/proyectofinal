@@ -1,0 +1,9 @@
+<div class="container mt-4" *ngIf="usuario; else errorTemplate">
+  <h2>Mi Perfil</h2>
+  <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+  <p><strong>Email:</strong> {{ usuario.email }}</p>
+</div>
+
+<ng-template #errorTemplate>
+  <div class="alert alert-warning">{{ errorMsg }}</div>
+</ng-template>
